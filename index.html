@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="city-search">
+      <div>
+        <label for="" class="city-label">City</label>
+        <input type="text" id="city-name" placeholder="Enter City Name" />
+      </div>
+      <input type="submit" id="search-city" value="search" />
+    </div>
+    <div class="location">
+      <h1 class="location-timezone">Timezone</h1>
+      <!-- <p>Icon</p> -->
+    </div>
+    <div class="temperature">
+      <div class="degree-section">
+        <h2 class="temperature-degree">0</h2>
+        <span>F</span>
+      </div>
+      <div class="temperature-description"></div>
+    </div>
+  </body>
+</html>

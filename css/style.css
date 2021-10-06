@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  color: white;
+}
+.location,
+.temperature,
+.city-search {
+  /* border: 1px solid red; */
+  height: 30vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.location {
+  justify-content: center;
+}
+.city-search {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.city-label {
+  /* font-weight: bold; */
+  margin-right: 10px;
+  font-size: 20px;
+}
+.temperature {
+  flex-direction: column;
+}
+.degree-section {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.degree-section span {
+  font-size: 30px;
+  margin: 10px;
+}
+.degree-section h2 {
+  font-size: 40px;
+}
