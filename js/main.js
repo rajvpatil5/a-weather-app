@@ -5,6 +5,7 @@ const searchCity = document.getElementById("search-city");
 const tempDegree = document.querySelector(".temperature-degree");
 const tempDiv = document.querySelector(".temperature");
 const timeZone = document.querySelector(".location-timezone");
+const tempDesc = document.querySelector(".temperature-description");
 const apiKey = "d3fbf2b1bd263206c599d1c0f2568eae";
 
 console.log(cityName);
@@ -42,16 +43,20 @@ const renderHtml = function (response) {
 
   timeZone.textContent = `Timezone - 
   UTC${response.timezone / 60 / 60} hrs`;
-  const html = response.weather
-    .map(
-      (ele) =>
-        `<div class="temperature-description">
-      ${ele.main} - ${ele.description}
-    </div>`
-    )
-    .join("");
-  // tempDiv.innerHTML = "";
-  tempDiv.insertAdjacentHTML("beforeend", html);
+  tempDesc.innerHTML = ``;
+  response.weather.forEach((ele) => {
+    tempDesc.innerHTML = `${ele.main} - ${ele.description}`;
+  });
+  // const html = response.weather
+  //   .map(
+  //     (ele) =>
+  //       `<div class="temperature-description">
+  //     ${ele.main} - ${ele.description}
+  //   </div>`
+  //   )
+  //   .join("");
+  // document.querySelector("temperature-description").remove();
+  // tempDiv.insertAdjacentHTML("beforeend", html);
 };
 /*
 https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=d3fbf2b1bd263206c599d1c0f2568eae
